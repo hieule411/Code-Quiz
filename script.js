@@ -1,4 +1,4 @@
-//array of quiz questions, multiple choices and correct answers
+//array of quiz's questions, multiple choices and correct answers
 var questions =[
     {  
         question: "Inside which HTML element do we put the JavaScript?",
@@ -51,4 +51,49 @@ countDown = "Time Left:" + timeLeft;
         clearInterval(timers);
     timeLeft;
 }, 1000;
+}
+
+function incorrectAnswer() {
+    score -= 5;
+    next();
+}
+
+function correctAnswer() {
+    score += 5;
+    next();
+}
+
+var saveTasks = function() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }
+
+var loadTasks = function() {
+    var savedTasks = localStorage.getItem("tasks");
+  }
+
+function saveScores() {
+    var userInitals = formControlEl.value.trim();
+    var userScores = JSON.parse(window.localStorage.getItem("userScores"));
+}
+
+function showScores() {
+    startScreenEl.setAttribute("class", "hidden");
+    viewScoresEl.removeAttribute("class");
+}
+
+function endQuiz() {
+    questionsEl.setAttribute("class", "hidden");
+    setUserInitals.removeAttribute("class");
+    setUserInitals.setAttribute("class", "score-screen")
+    finalScoreEl.textContent = "Final Score: " + score;
+    submitBtn.onclick= saveScores;
+    scoreEl.setAttribute("class", "hidden");
+}
+
+function clearHighScores() {
+    window.localStorage.removeItem("userScores");
+    history.go(0);
+}
+function restartQuiz() {
+    history.go(0);
 }

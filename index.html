@@ -5,17 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code-Quiz</title>
-    <link rel="stylesheet" href="css/style.css" /> 
+    <link rel="stylesheet" href="style.css" /> 
 </head>
 <body>
+    <header>
+        <button type="button" class="btn" id="high scores">View High Scores</button>
+        <p class="countdown" id="countdown"></p>
+        <p class="score" id="score"></p>
+    </header>
+    
     <main>
         <section class ="start screen" id="start screen">
-            <h1>Coding Quiz Challenge</h1>
-            <p> id="discription" >Right answers to earn points, wrong answers will lose points!</p>
-            <button id="start_quiz_button">Start Quiz</button>
+            <h1 class="questions">Coding Quiz Challenge</h1>
+            <p id="discription">Right answers to earn points, wrong answers will lose points!</p>
             <p>Click this button below to start</p>
+            <button id="start_quiz_button">Start Quiz</button>
         </section>
-    <div class="user score" id="user score">
+    <div class="hidden" id="user score">
         <h3 id="final score"></h3>
         <h4>Enter Your Initals here</h4>
     </div>

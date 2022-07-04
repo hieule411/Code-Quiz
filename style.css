@@ -6,7 +6,6 @@ body{
 
 section{
     background-color: white;
-    border: solid 2px black;
     padding: 10px;
 }
 
@@ -29,16 +28,15 @@ h1{
 
 p{
     padding: 0 10%;
+    text-align: center;
 }
 
 button {
     background-color: navy;
     text-align: center;
-}
-
-#startButton{
-    display: block;
-    margin: 0 auto;
+    width: 25%;
+    padding: 12px;
+    margin: 15px;
 }
 
 .choice{

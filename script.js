@@ -53,6 +53,8 @@ countDown = "Time Left:" + timeLeft;
 }, 1000;
 }
 
+startButtonEl.addEventListener("click",startQuiz);
+
 function incorrectAnswer() {
     score -= 5;
     next();
